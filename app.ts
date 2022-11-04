@@ -15,6 +15,6 @@ app.use('/', indexRouter)
 app.use('/user', userRouter)
 app.use('/task', taskRouter)
 
-app.listen(8081, () => {
-  console.log(`[server]: Server is running at https://localhost:${8081}`)
+app.listen(process.env.PORT, () => {
+  console.log(`[server]: Server is running at https://localhost:${process.env.PORT}`)
 })
