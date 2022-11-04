@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize'
-import db from '../../config/db'
+import db from '../../../config/db'
 import User from '../user/User.model'
 
 const Task = db.define('Task', {

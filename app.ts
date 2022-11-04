@@ -2,8 +2,8 @@ require('dotenv').config()
 import express from 'express'
 import bodyParser from 'body-parser'
 import indexRouter from './src/root'
-import userRouter from './src/user/User.routes'
-import taskRouter from './src/task/Task.routes'
+import userRouter from './src/modules/user/User.routes'
+import taskRouter from './src/modules/task/Task.routes'
 
 const app = express()
 

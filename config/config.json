@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "@nglakibr0",
+    "password": "coolpb",
     "database": "bankan_db_local",
     "host": "127.0.0.1",
     "dialect": "mysql"
