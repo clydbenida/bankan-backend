@@ -1,10 +1,12 @@
 import { Router } from 'express'
 import db from '../config/db'
+import { generatePasswordToHash } from './services/bcrypt'
 
 const indexRouter = Router()
 
-indexRouter.get('/', (req, res) => {
-  res.json({ message: 'this is the root' })
+indexRouter.get('/', async (req, res) => {
+  
+  res.json({ message: `this is the root` })
 })
 
 indexRouter.get('/sync', async (req, res) => {
