@@ -1,4 +1,4 @@
-export function resTemplate(status: string, message: string, data: any) {
+export function resTemplate(status: "SUCCESS" | "FAILED", message: string, data: any) {
   return {
     status,
     message,
