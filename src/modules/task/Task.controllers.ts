@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { resTemplate } from '../../middlewares/utils'
+import { resTemplate } from '../../helpers/utils'
 import TaskService from './Task.services'
 
 class TaskController {

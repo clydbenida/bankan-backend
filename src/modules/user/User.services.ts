@@ -1,7 +1,7 @@
 import { Response } from 'express'
 import User from './User.model'
 import { CreateUserParams, CredentialsType, UserType } from './User.types'
-import { resTemplate } from '../../middlewares/utils'
+import { resTemplate } from '../../helpers/utils'
 
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -45,6 +45,8 @@ class UserServices {
       { expiresIn: '2h' })
 
       return token
+    } else {
+      throw new Error("Username or password is incorrect")
     }
 
     console.log(foundUser)

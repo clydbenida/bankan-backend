@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import { resTemplate } from '../../middlewares/utils'
+import { resTemplate } from '../../helpers/utils'
 import UserServices from './User.services'
 import { CreateUserParams, CredentialsType } from './User.types'
 
@@ -25,7 +25,7 @@ class UserController {
 
       const token = await UserServices.login(credentials)
 
-      res.status(200).json(resTemplate("SUCCESS", "Successfully logged in user", token))
+      res.status(200).json(resTemplate("SUCCESS", "Successfully logged in user", {token}))
     } catch (e: any) {
       console.log('Error logging in user: ', e)
       res.status(500).json({ message: `Error logging in user: ${e.message}` })
